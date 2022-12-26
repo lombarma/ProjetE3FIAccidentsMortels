@@ -3,18 +3,22 @@ import plotly.express as px
 
 FILENAME = r"C:\Users\Maxime\PycharmProjects\ProjetE3FIAccidentsMortels\data\usagers-2021.csv"
 
+
 def get_data(filename):
     return pd.read_csv(filename, sep=";")
+
 
 def get_accidents_homme():
     data = get_data(FILENAME)
     data = data[data["sexe"] == 1]
     return data.value_counts().sum()
 
+
 def get_accidents_femme():
     data = get_data(FILENAME)
     data = data[data["sexe"] == 2]
     return data.value_counts().sum()
+
 
 def get_accidents_inconnus():
     data = get_data(FILENAME)
