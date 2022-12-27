@@ -1,8 +1,10 @@
 # TODO : affichage des accidents sur la carte
-# TODO : histogramme des accidents par mois sur 2021
-# TODO : cammebert des accidents en fonction du sexe des victimes (1 = homme, 2 = femme) -- Fait
-# TODO : cammebert des accidents en fonction de la gravité de l'accident -- Fait
+# TODO : bar chart des accidents par mois sur 2021 -- Fait
+# TODO : pie chart des accidents en fonction du sexe des victimes (1 = homme, 2 = femme) -- Fait
+# TODO : bar chart des accidents en fonction de la gravité de l'accident -- Fait
 # TODO : barchart nombre d'accidents par jour de la semaine
+# TODO : graphique des accidents en fonction de la catégorie de véhicule impliquée -- Fait
+# TODO : il faut un histogramme
 
 import dash
 from dash import dcc
@@ -12,6 +14,7 @@ import plotly.express as px
 from script import camembert_accident_par_sexe as cas
 from script import bar_chart_accident_par_gravite as bcag
 from script import bar_chart_accidents_par_mois as bcapm
+from script import categorie_vehicule_impliquee as cvi
 
 
 def dash_project():
@@ -19,11 +22,13 @@ def dash_project():
     fig_camembert_cas = cas.camembert_accident_par_sexe()
     fig_bar_chart_bcag = bcag.bar_chart_accident_par_gravite()
     fig_bar_chart_bcapm = bcapm.bar_chart_accidents_par_mois()
+    fig_graph_cvi = cvi.chart_vehicle_categories()
 
     # Update
     fig_camembert_cas.update_layout(paper_bgcolor="#132742", plot_bgcolor="#132742", font_color="#FFFFFF")
     fig_bar_chart_bcag.update_layout(paper_bgcolor="#132742", plot_bgcolor="#132742", font_color="#FFFFFF")
     fig_bar_chart_bcapm.update_layout(paper_bgcolor="#132742", plot_bgcolor="#132742", font_color="#FFFFFF")
+    fig_graph_cvi.update_layout(paper_bgcolor="#132742", plot_bgcolor="#132742", font_color="#FFFFFF")
 
     # Dashboard
     app = dash.Dash()
@@ -44,6 +49,13 @@ def dash_project():
                      dcc.Graph(
                          id='bar chart accident par gravite',
                          figure=fig_bar_chart_bcag
+                     )
+                 ]
+                 ),
+        html.Div(children=[
+                     dcc.Graph(
+                         id='graph categorie vehicule impliquee',
+                         figure=fig_graph_cvi
                      )
                  ]
                  ),

@@ -1,7 +1,7 @@
 import pandas as pd
 import plotly.express as px
 
-FILENAME = r"C:\Users\Maxime\PycharmProjects\ProjetE3FIAccidentsMortels\data\carcteristiques-2021.csv"
+FILENAME = "data/carcteristiques-2021.csv"
 
 dictionnaire_mois = {1: "Janvier", 2: "Février", 3: "Mars", 4: "Avril", 5: "Mai", 6: "Juin", 7: "Juillet", 8: "Août", 9: "Septembre", 10: "Octobre", 11: "Novembre", 12: "Décembre"}
 
