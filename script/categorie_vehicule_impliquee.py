@@ -29,6 +29,7 @@ def chart_vehicle_categories():
 
     fig = px.scatter(x=dict_catv.values(), y=dict_catv.keys(), color=dict_catv.keys(), size=dict_catv.values(), size_max=100,
                      title="Graphique montrant le nombre d'accidents en fonction de la catégorie du véhicule impliqué")
+    fig.update_layout(xaxis_title="Nombre d'accidents", yaxis_title="Catégorie du véhicule impliqué")
     return fig
 
 

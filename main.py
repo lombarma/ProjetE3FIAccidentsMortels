@@ -19,9 +19,9 @@ from script import categorie_vehicule_impliquee as cvi
 
 def dash_project():
     # Figures
-    fig_camembert_cas = cas.camembert_accident_par_sexe()
-    fig_bar_chart_bcag = bcag.bar_chart_accident_par_gravite()
-    fig_bar_chart_bcapm = bcapm.bar_chart_accidents_par_mois()
+    fig_camembert_cas = cas.pie_chart_accident_by_sex()
+    fig_bar_chart_bcag = bcag.bar_chart_accident_by_gravity()
+    fig_bar_chart_bcapm = bcapm.bar_char_accidents_by_month()
     fig_graph_cvi = cvi.chart_vehicle_categories()
 
     # Update
