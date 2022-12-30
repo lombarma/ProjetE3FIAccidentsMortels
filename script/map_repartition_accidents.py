@@ -8,23 +8,28 @@ def get_data():
     data = pd.read_csv(FILENAME, sep=";")
     dep = data["dep"].value_counts()
 
-    coordinates = {row[1]["dep"]: [float(row[1]["long"].strip().replace(",", ".")), float(row[1]["lat"].strip().replace(",", "."))] for row in data.iterrows()}
-    #return dep, coordinates
-    print(coordinates)
+    coordinates = {row[1]["dep"]: (float(row[1]["lat"].strip().replace(",", ".")), float(row[1]["long"].strip().replace(",", "."))) for row in data.iterrows()}
+    return dep, coordinates
 
 
 def get_map():
     dep, coordinates = get_data()
     map = folium.Map(location=[46.52863469527167, 2.43896484375], zoom_start=6)
     for i in dep.index:
-        folium.CircleMarker(location=coordinates[i], radius=dep[i] / 1000, popup=f"{i} - {dep[i]} accidents",
-                            color="red", fill=True).add_to(map)
+        folium.CircleMarker(
+            location=coordinates[i],
+            radius=dep[i] / 100,
+            popup=f"{i} - {dep[i]} accidents",
+            color='crimson',
+            fill=True,
+            fill_color='crimson'
+        ).add_to(map)
     #return map
     map.save(outfile="map4.html")
 
 
-get_data()
-#get_map()
+#get_data()
+get_map()
 
 
 """import folium
