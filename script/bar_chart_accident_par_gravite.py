@@ -3,6 +3,7 @@ import plotly.express as px
 
 FILENAME = "data/usagers-2021.csv"
 
+
 def get_data():
     """
     Returns the data from the CSV file
@@ -31,8 +32,6 @@ def bar_chart_accident_by_gravity():
     data = get_accidents_by_gravity()
     labels = ["Indemne", "Blessé léger", "Blessé hospitalisé", "Tué"]
     fig = px.bar(data, x=labels, y=data, color=data.index, text=data.values, range_y=[0, data.max()])
-    fig.update_layout(xaxis_title="Gravité", yaxis_title="Nombre d'accidents", title="Graph montrant le nombre d'accidents en fonction de la gravité")
+    fig.update_layout(xaxis_title="Gravité", yaxis_title="Nombre d'accidents", title="Nombre d'accidents par gravité")
     #fig.show()
     return fig
-
-bar_chart_accident_by_gravity()

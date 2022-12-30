@@ -5,12 +5,14 @@ FILENAME = "data/carcteristiques-2021.csv"
 
 dictionnaire_mois = {1: "Janvier", 2: "Février", 3: "Mars", 4: "Avril", 5: "Mai", 6: "Juin", 7: "Juillet", 8: "Août", 9: "Septembre", 10: "Octobre", 11: "Novembre", 12: "Décembre"}
 
+
 def get_data():
     """
     return the data from the csv file
     :return: DataFrame
     """
     return pd.read_csv(FILENAME, sep=";")
+
 
 def get_accidents_by_month():
     """
@@ -19,6 +21,7 @@ def get_accidents_by_month():
     data = get_data()
     data = data["mois"].value_counts()
     return data
+
 
 def bar_char_accidents_by_month():
     """
@@ -30,5 +33,3 @@ def bar_char_accidents_by_month():
     fig.update_xaxes(ticktext=list(dictionnaire_mois.values()), tickvals=list(dictionnaire_mois.keys()))
     #fig.show()
     return fig
-
-bar_char_accidents_by_month()

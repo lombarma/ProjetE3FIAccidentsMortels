@@ -25,10 +25,10 @@ def dash_project():
     fig_graph_cvi = cvi.chart_vehicle_categories()
 
     # Update
-    fig_camembert_cas.update_layout(paper_bgcolor="#132742", plot_bgcolor="#132742", font_color="#FFFFFF")
-    fig_bar_chart_bcag.update_layout(paper_bgcolor="#132742", plot_bgcolor="#132742", font_color="#FFFFFF")
+    fig_camembert_cas.update_layout(paper_bgcolor="#172F50", plot_bgcolor="#172F50", font_color="#FFFFFF")
+    fig_bar_chart_bcag.update_layout(paper_bgcolor="#172F50", plot_bgcolor="#172F50", font_color="#FFFFFF")
+    fig_graph_cvi.update_layout(paper_bgcolor="#172F50", plot_bgcolor="#172F50", font_color="#FFFFFF")
     fig_bar_chart_bcapm.update_layout(paper_bgcolor="#132742", plot_bgcolor="#132742", font_color="#FFFFFF")
-    fig_graph_cvi.update_layout(paper_bgcolor="#132742", plot_bgcolor="#132742", font_color="#FFFFFF")
 
     # Dashboard
     app = dash.Dash()
@@ -36,7 +36,8 @@ def dash_project():
         html.H1(children=f'Les accidents de la route en France en 2021',
                 style={'textAlign': 'center', 'color': '#FFFFF'}),
 
-        html.Div(style={"display": "inline-block", "width": "45%", "border": "2px solid white", "margin": "20px"},
+        html.Div(style={"display": "inline-block", "width": "45%", "margin": "20px",
+                        "box-shadow": "0 4px 8px 0 rgba(0, 0, 0, 0.4)"},
                  children=[
                      dcc.Graph(
                          id='camembert accident par sexe',
@@ -44,7 +45,8 @@ def dash_project():
                      )
                  ]
                  ),
-        html.Div(style={"display": "inline-block", "width": "45%", "border": "2px solid white", "margin": "20px"},
+        html.Div(style={"display": "inline-block", "width": "45%", "margin": "20px",
+                        "box-shadow": "0 4px 8px 0 rgba(0, 0, 0, 0.4)"},
                  children=[
                      dcc.Graph(
                          id='bar chart accident par gravite',
@@ -52,20 +54,22 @@ def dash_project():
                      )
                  ]
                  ),
-        html.Div(children=[
+        html.Div(style={"margin": "20px", "box-shadow": "0 4px 8px 0 rgba(0, 0, 0, 0.4)"},
+                 children=[
                      dcc.Graph(
                          id='graph categorie vehicule impliquee',
                          figure=fig_graph_cvi
                      )
                  ]
                  ),
-        html.Div(children=[
-            dcc.Graph(
-                id='bar chart accidents par mois',
-                figure=fig_bar_chart_bcapm
-            )
-        ]
-        )
+        html.Div(
+                 children=[
+                     dcc.Graph(
+                         id='bar chart accidents par mois',
+                         figure=fig_bar_chart_bcapm
+                     )
+                 ]
+                 )
     ])
     app.run_server(debug=True)
 
