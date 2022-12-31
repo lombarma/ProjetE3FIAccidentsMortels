@@ -1,5 +1,13 @@
 # ProjetE3FIAccidentsMortels
 
+```mermaid
+graph LR
+A[Accidents mortels] --> B[Données]
+B --> C[Nettoyage]
+C --> D[Analyse]
+D --> E[Modélisation]
+E --> F[Prédiction]
+```
 
 ## User Guide
 - (1) Télécharger le projet sur votre ordinateur en utilisant la commande suivante : `git clone adresse_du_projet`
