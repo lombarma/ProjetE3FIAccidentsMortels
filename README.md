@@ -19,7 +19,7 @@ D[get_data.py] --> C
 ### Installation et exécution
 - (1) Cloner le projet sur votre ordinateur en utilisant la commande suivante : `git clone adresse_du_projet`
 - (2) Récupérer tous les packages additionnels en utilisant la commande suivante : `python -m pip install -r requirements.txt`
-- (3) Récupérer les datas en utilisant la commande suivante : `python get_data.py`
+- (3) Récupérer les datasets en utilisant la commande suivante : `python get_data.py`
 - (4) Lancer le programme en utilisant la commande suivante : `python main.py`
 
 ### Copyright
