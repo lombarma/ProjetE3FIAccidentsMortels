@@ -4,6 +4,7 @@
 graph TD
 A[scripts] --> B[main.py]
 C[data] --> B
+D[get_data.py] --> C
 ```
 
 ## User Guide
