@@ -2,11 +2,8 @@
 
 ```mermaid
 graph TD
-A[Accidents mortels] --> B[Données]
-B --> C[Nettoyage]
-C --> D[Analyse]
-D --> E[Modélisation]
-E --> F[Prédiction]
+A[scripts] --> B[main.py]
+C[data] --> A
 ```
 
 ## User Guide
