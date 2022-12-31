@@ -1,4 +1,10 @@
-# ProjetE3FIAccidentsMortels
+# Etudes des accidents en France en 2021
+
+## Description
+Nous avons choisi de travailler sur les accidents de la route en France sur l'année 2021. Pour cela, nous avons utilisé
+des données provenant du site data.gouv.fr. Nous avons choisi de travailler sur les accidents de la route, car nous
+sommes tous les deux utilisateurs de la route et nous trouvions intéressant d'étudier des données sur ce sujet. De plus,
+il s'agit d'un sujet possédant une grande importance au vu du nombre d'accidents en France.
 
 ## User Guide
 
@@ -10,10 +16,15 @@ C[data] --> A
 D[get_data.py] --> C
 ```
 
-- (1) Télécharger le projet sur votre ordinateur en utilisant la commande suivante : `git clone adresse_du_projet`
+### Installation et exécution
+- (1) Cloner le projet sur votre ordinateur en utilisant la commande suivante : `git clone adresse_du_projet`
 - (2) Récupérer tous les packages additionnels en utilisant la commande suivante : `python -m pip install -r requirements.txt`
 - (3) Récupérer les datas en utilisant la commande suivante : `python get_data.py`
 - (4) Lancer le programme en utilisant la commande suivante : `python main.py`
+
+### Copyright
+Nous déclarons sur l’honneur que le code fourni a été produit par Maxime LOMBARDO et Joël MBIAPA.
+
 
 ## Rapport d'analyse
 Grâce à cette visualisation de données, nous pouvons tirer une conclusion de l'accident 'typique' qui peut se produire
@@ -42,3 +53,7 @@ en fonction de l'âge des conducteurs. Il retourne un pie chart (camembert) qui 
 
 Pour étendre le projet, il suffit de créer un nouveau fichier dans le dossier `scripts` et de l'appeler dans le fichier `main.py`.
 Il faut également modifier la fonction dash_project() dans le fichier `main.py` pour ajouter le nouveau graphique au dashboard.
+
+## Authors
+- Joël MBIAPA
+- Maxime LOMBARDO

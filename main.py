@@ -12,6 +12,9 @@ from scripts import pie_chart_accident_by_ages as pca
 
 
 def dash_project():
+    """
+    Principal function of the project where the dash app is created
+    """
     # Figures
     pie_chart_by_sex = cas.pie_chart_accident_by_sex()
     bar_chart_per_gravity = bcag.bar_chart_accident_by_gravity()
