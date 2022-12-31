@@ -1,7 +1,7 @@
 # ProjetE3FIAccidentsMortels
 
 ```mermaid
-graph LR
+graph TD
 A[Accidents mortels] --> B[Données]
 B --> C[Nettoyage]
 C --> D[Analyse]
