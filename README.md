@@ -35,6 +35,7 @@ avec un profil type de conducteur. Les accidents les plus récurrents sont les s
 - gravité de l'accident : indemne
 - heure de l'accident : 16h-18h
 - lieu : Paris et sa banlieue
+- avec principalement un fort taux d'accidents au début de l'été et au retour des vacances
 
 
 ## Developer Guide
