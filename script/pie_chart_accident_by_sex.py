@@ -46,8 +46,4 @@ def pie_chart_accident_by_sex():
     labels = ["Homme", "Femme", "Inconnu"]
     values = [get_accidents_men(), get_accidents_women(), get_accidents_unknown()]
     fig = px.pie(values=values, names=labels, title="Nombre d'accidents par sexe")
-    #fig.show()
     return fig
-
-
-pie_chart_accident_by_sex()

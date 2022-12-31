@@ -31,5 +31,4 @@ def bar_char_accidents_by_month():
     fig = px.bar(data, x=data.index, y=data.values, color=data.index, labels={"x": "Mois", "y": "Nombre d'accidents"}, title="Nombre d'accidents par mois")
     fig.update_layout(xaxis_title="Mois", yaxis_title="Nombre d'accidents", title="Nombre d'accidents par mois")
     fig.update_xaxes(ticktext=list(dictionnaire_mois.values()), tickvals=list(dictionnaire_mois.keys()))
-    #fig.show()
     return fig

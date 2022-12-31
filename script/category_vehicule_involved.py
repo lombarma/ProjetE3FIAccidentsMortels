@@ -31,5 +31,3 @@ def chart_vehicle_categories():
                      labels={"x": "Nombre d'accidents", "y": "Catégorie de véhicule", "color": "Catégories"},
                      size_max=100, log_x=True, title="Nombre d'accidents par catégorie de véhicule")
     return fig
-
-
