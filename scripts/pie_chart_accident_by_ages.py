@@ -1,7 +1,7 @@
 import pandas as pd
 import plotly.express as px
 
-FILENAME = "../data/usagers-2021.csv"
+FILENAME = "data/usagers-2021.csv"
 
 
 def get_data():
