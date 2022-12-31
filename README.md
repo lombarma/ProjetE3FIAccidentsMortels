@@ -1,6 +1,15 @@
 # ProjetE3FIAccidentsMortels
 
 ## User Guide
+
+### Architecture du projet
+```mermaid
+graph TD
+A[scripts] --> B[main.py]
+C[data] --> A
+D[get_data.py] --> C
+```
+
 - (1) Télécharger le projet sur votre ordinateur en utilisant la commande suivante : `git clone adresse_du_projet`
 - (2) Récupérer tous les packages additionnels en utilisant la commande suivante : `python -m pip install -r requirements.txt`
 - (3) Récupérer les datas en utilisant la commande suivante : `python get_data.py`
