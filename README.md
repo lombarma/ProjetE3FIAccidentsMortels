@@ -3,7 +3,7 @@
 ```mermaid
 graph TD
 A[scripts] --> B[main.py]
-C[data] --> B
+C[data] --> A
 D[get_data.py] --> C
 ```
 
