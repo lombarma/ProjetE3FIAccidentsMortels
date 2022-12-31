@@ -10,12 +10,16 @@ CATEGORIES = {"Indéterminable": [-1, 0], "Bicyclette": [1], "Voiturette": [3],
 
 
 def get_data():
-    data = pd.read_csv(FILENAME, sep=";")
-    catv = data["catv"].value_counts()
-    return catv
+    """
+    :return: a DataFrame with the categories of vehicles and the number of accidents
+    """
+    return pd.read_csv(FILENAME, sep=";")["catv"].value_counts()
 
 
-def chart_vehicle_categories():
+def dict_catv():
+    """
+    :return: return a dictionary with the categories of vehicles and the number of accidents
+    """
     catv = get_data()
     dict_catv = {}
 
@@ -26,8 +30,15 @@ def chart_vehicle_categories():
                     dict_catv[k2] += v
                 else:
                     dict_catv[k2] = v
+    return dict_catv
 
-    fig = px.scatter(x=dict_catv.values(), y=dict_catv.keys(), color=dict_catv.keys(), size=dict_catv.values(),
+
+def scatter_vehicle_categories():
+    """
+    :return: the scatter plot of the number of accidents by vehicle categories
+    """
+    data = dict_catv()
+    fig = px.scatter(x=data.values(), y=data.keys(), color=data.keys(), size=data.values(),
                      labels={"x": "Nombre d'accidents", "y": "Catégorie de véhicule", "color": "Catégories"},
                      size_max=100, log_x=True, title="Nombre d'accidents par catégorie de véhicule")
     return fig

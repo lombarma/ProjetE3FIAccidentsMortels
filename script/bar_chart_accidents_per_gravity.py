@@ -31,6 +31,6 @@ def bar_chart_accident_by_gravity():
     """
     data = get_accidents_by_gravity()
     labels = ["Indemne", "Blessé léger", "Blessé hospitalisé", "Tué"]
-    fig = px.bar(data, x=labels, y=data, color=data.index, text=data.values, range_y=[0, data.max()])
+    fig = px.bar(data, x=labels, y=data.values, color=data.index, text=data.values, range_y=[0, data.max()])
     fig.update_layout(xaxis_title="Gravité", yaxis_title="Nombre d'accidents", title="Nombre d'accidents par gravité")
     return fig
