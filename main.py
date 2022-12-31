@@ -2,13 +2,13 @@ import dash
 from dash import dcc
 from dash import html
 
-from script import pie_chart_accident_by_sex as cas
-from script import bar_chart_accidents_per_gravity as bcag
-from script import bar_chart_accidents_per_month as bcapm
-from script import category_vehicle_involved as cvi
-from script import map_accident_distribution as mra
-from script import hist_accidents_per_hours as haph
-from script import pie_chart_accident_by_ages as pca
+from scripts import pie_chart_accident_by_sex as cas
+from scripts import bar_chart_accidents_per_gravity as bcag
+from scripts import bar_chart_accidents_per_month as bcapm
+from scripts import category_vehicle_involved as cvi
+from scripts import map_accident_distribution as mra
+from scripts import hist_accidents_per_hours as haph
+from scripts import pie_chart_accident_by_ages as pca
 
 
 def dash_project():
